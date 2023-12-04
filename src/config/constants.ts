@@ -22,3 +22,4 @@ export const MORA_ROUTER = '0x594e37b9f39f5d31dec4a8c1cc4fe2e254153034';
 
 export const _10 = BigNumber.from('10');
 export const _10e18 = _10.pow(18);
+export const _10e6 = _10.pow(6);

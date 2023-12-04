@@ -26,7 +26,6 @@
 
 npm i => Put your private key and wallet address in the .env file => npm start => enjoy!!
 
-
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.

@@ -22,4 +22,22 @@ export class WalletHandler {
       this.wallet.connect(this.provider),
     );
   };
+
+  getBalance = async (tokenAddress: string) => {
+    const wallet = process.env.ADDRESS;
+    const tokenContract = this.getContract(tokenAddress, [
+      {
+        constant: true,
+        inputs: [{ name: '_owner', type: 'address' }],
+        name: 'balanceOf',
+        outputs: [{ name: 'balance', type: 'uint256' }],
+        type: 'function',
+      },
+    ]);
+    return await tokenContract.balanceOf(wallet);
+  };
+
+  getNeonBalance = async () => {
+    return await this.provider.getBalance(process.env.ADDRESS);
+  };
 }

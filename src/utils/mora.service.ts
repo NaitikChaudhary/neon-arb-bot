@@ -65,7 +65,7 @@ export class MoraService {
     const tx = await routerContract.swapTokensForExactETH(
       amountOutForNeon,
       amountInMaxForUSDC,
-      [USDC_CONTRACT_ADDRESS, WNEON_CONTRACT_ADDRESS],
+      [USDC_CONTRACT_ADDRESS, wSOL_CONTRACT_ADDRESS, WNEON_CONTRACT_ADDRESS],
       WALLET_ADDRESS,
       deadline,
       overrides,
